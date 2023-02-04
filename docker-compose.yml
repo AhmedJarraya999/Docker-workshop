@@ -1,0 +1,17 @@
+version: '3'
+services:
+   apache:
+     build: ./apache/
+     container_name: apache-container 
+     ports: 
+      - "80:80"
+   nginx:
+      build: ./nginx
+      container_name: nginx-container
+      ports: 
+       - "81:80"
+   haproxy:
+      build: ./haproxy
+      container_name: haproxy-container
+      ports: 
+       - "82:80"
